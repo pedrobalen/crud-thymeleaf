@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>minha pagina de cadastro</h1>
+    <form th:action="@{/produto}" th:object="${produto}" method="post">
+        <label>Nome</label>
+        <input type="text" th:field="*{nome}"/><br/>
+        <label>Descricao</label>
+        <input type="text" th:field="*{descricao}"/><br/>
+        <label>Valor</label>
+        <input type="number" th:field="*{valor}"/><br/>
+        <label>Quantidade</label>
+        <input type="number" th:field="*{quantidade}"/><br/>
+        <label>Imagem</label>
+        <input type="text" th:field="*{imagem}"/><br/>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
