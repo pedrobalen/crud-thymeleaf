@@ -8,6 +8,7 @@
 <body>
     <h1>minha pagina de cadastro</h1>
     <form th:action="@{/produto}" th:object="${produto}" method="post">
+        <input type="hidden" th:field="*{id}"/>
         <label>Nome</label>
         <input type="text" th:field="*{nome}"/><br/>
         <label>Descricao</label>
